@@ -29,8 +29,8 @@ def load_qty_ae_lookup(path: str) -> dict[int, int]:
 def safe_div(a: float, b: float) -> float:
     return a / b if b else 0.0
 
-st.set_page_config(page_title="SW CO Network Effect", layout="wide")
-st.title("SW CO Network effect")
+st.set_page_config(page_title="SW Cos Network Effect", layout="wide")
+st.title("SW Cos Network effect")
 
 lookup = load_qty_ae_lookup(EXCEL_PATH)
 
@@ -83,11 +83,11 @@ st.subheader("Single-row table")
 
 st.dataframe([{
     "Qty of Customer Accts ": cust_accts,
-    "Qty AE (B)": qty_ae,
+    "Qty AE ": qty_ae,
     "cust acct per AE ": round(cust_acct_per_ae, 2),
     "qty hunter accts per AE ": round(hunter_accts_per_ae, 2),
     "Qty AE per pack ": qty_ae_per_pack,
-    "Links per pack )": links_per_pack,
+    "Links per pack ": links_per_pack,
     "AE links in each pack ": ae_links_in_each_pack,
     "AE total links across packs ": round(ae_total_links_across_packs, 2),
     "Company-wide links ": company_wide_links,
