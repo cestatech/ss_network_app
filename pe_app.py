@@ -35,16 +35,16 @@ st.title("SW CO Network effect")
 lookup = load_qty_ae_lookup(EXCEL_PATH)
 
 # ----- Inputs (your “green shaded columns”) -----
-st.sidebar.header("Inputs (Green Columns)")
+st.sidebar.header("Inputs ")
 
 cust_accts = st.sidebar.selectbox(
-    "Qty of Customer Accts (Column A)",
+    "Qty of Customer Accts ",
     options=sorted(lookup.keys()),
     index=0
 )
 
 qty_ae_per_pack = st.sidebar.selectbox(
-    "Qty AE per pack (Column E)",
+    "Qty AE per pack ",
     options=list(range(6, 13)),
     index=0
 )
@@ -72,7 +72,7 @@ col4.metric("qty hunter accts per AE ", f"{hunter_accts_per_ae:.2f}")
 
 col5, col6, col7, col8 = st.columns(4)
 col5.metric("Qty AE per pack ", qty_ae_per_pack)
-col6.metric("Links per pack )", links_per_pack)
+col6.metric("Links per pack ", links_per_pack)
 col7.metric("AE links in each pack ", ae_links_in_each_pack)
 col8.metric("AE total links across packs ", f"{ae_total_links_across_packs:.2f}")
 
