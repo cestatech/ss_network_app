@@ -79,7 +79,7 @@ col8.metric("AE total links across packs ", f"{ae_total_links_across_packs:.2f}"
 st.metric("Company-wide network connections ", company_wide_links)
 
 st.divider()
-st.subheader("Single-row table (like Excel row)")
+st.subheader("Single-row table")
 
 st.dataframe([{
     "Qty of Customer Accts ": cust_accts,
